@@ -1,2 +1,2 @@
 # Lova 
-Todos os feitos por mim.
+Site em desenvolvimento
