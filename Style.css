@@ -81,6 +81,9 @@ body {
 
 nav ul li:hover{
   cursor: pointer;
+  text-shadow: 0px 0px 20px white;
+  transform: scale(1.1);
+  transition: 0.7s;
 }
 
 .btnlogin{
@@ -161,125 +164,96 @@ nav ul li:hover{
   position: relative;
   color: rgba(26, 24, 24, 0.959);
   border-top: 2px solid rgb(139, 139, 139);
-  width: 12%;
+  width: 203px;
   left: 20px;
   margin: 0;
   top: 40px;
+  height: 50px;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  
 }
-
-.esquerda {
-  width: 50%;
-  background-color: #F2EEEB;
-  height: 100vh;
+.Pagina-2 h1:hover{
+  cursor: pointer;
 }
+/* FIM   */
 
-
-
-.direita {
-  width: 50%;
-  background-color: #D9C6BA;
-  height: 100vh;
-}
-
-
-
-
-
-/* CARD PRODUTOS   */
 
 /*       CARD CONTAINER    */
-.Pro-div {
+.card-container{
+  position: absolute;
   display: flex;
+  margin-top: 400px;
+  width: 1000px;
+  height: 350px;
+  left: 150px;
+}
+.card-container img{
+  margin: 20px;
+  border-radius: 5px;
 }
 
-.card-1 {
-  margin-right: 20px;
-  width: 190px;
-  height: 300px;
-  top: 300px;
-  left: 25px;
-  padding: .8em;
-  background: #f5f5f5;
-  position: relative;
-  overflow: visible;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+.card-1{
+  border-radius: 5px;
+  margin: 20px;
+  background-color: rgba(235, 235, 235, 0.603);
+  outline: 2px solid rgba(150, 148, 148, 0.397);
+  box-shadow: 7px 15px 10px #57839A;
+}
+.card-2{
+  border-radius: 5px;
+  background-color: black;
+  margin: 20px;
+  background-color: rgba(235, 235, 235, 0.603);
+  outline: 2px solid rgba(150, 148, 148, 0.397);
+  box-shadow: 7px 15px 10px #DCB97E;
+}
+.card-3{
+  border-radius: 5px;
+  background-color: black;
+  margin: 20px;
+  background-color: rgba(235, 235, 235, 0.603);
+  outline: 2px solid rgba(150, 148, 148, 0.397);
+  box-shadow: 7px 15px 10px #425364;
+}
+.card-4{
+  border-radius: 5px;
+  background-color: black;
+  margin: 20px;
+  background-color: rgba(235, 235, 235, 0.603);
+  outline: 2px solid rgba(150, 148, 148, 0.397);
+  box-shadow: 7px 15px 10px #c7740081;
 }
 
-.card-2 {
-  width: 190px;
-  height: 300px;
-  left: 25px;
-  top: 300px;
-  padding: .8em;
-  background: #f5f5f5;
-  position: relative;
-  overflow: visible;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+.card-container img:hover{
+  cursor: pointer;
+  transform: translateY(-5px);;
+  transition: 0.7s;
 }
 
-/*       FIM    */
-
-.card-img {
-  background-color: #ffcaa6;
-  height: 40%;
-  width: 100%;
-  border-radius: .5rem;
-  transition: .3s ease;
+.card-container img:active{
+  transform: translateY(-8px);
+  transition: 0.7s;
 }
 
-.card-info {
-  padding-top: 10%;
-}
-
-svg {
-  width: 20px;
-  height: 20px;
-}
-
-.card-footer {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 10px;
-  border-top: 1px solid #ddd;
-}
-
-/*Text*/
-.text-title {
-  font-family: "Raleway", serif;
+.product-name{
+  font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+  margin-left: 20px;
 }
 
-.text-body {
-  font-family: "Raleway", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+.price{
+  position: absolute;
+  color: green;
+  font-weight: bold;
+  margin-left: 20px;
 }
 
-/*Button*/
-.card-button {
-  border: 1px solid #252525;
-  display: flex;
-  padding: .3em;
-  cursor: pointer;
-  border-radius: 50px;
-  transition: .3s ease-in-out;
-}
 
-/*Hover*/
-.card-img:hover {
-  transform: translateY(-25%);
-  box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
-}
-
-.card-button:hover {
-  border: 1px solid #ffcaa6;
-  background-color: #ffcaa6;
-}
 
 /*   FIM     /*
 
