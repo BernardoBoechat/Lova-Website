@@ -157,23 +157,24 @@ nav ul li:hover{
   display: flex;
   margin: 0;
   padding: 0;
-
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(182, 176, 198, 0.788)), url(mockup/Background-page-2.jpg);
+  background-size: cover;
 }
+
 
 .Pagina-2 h1 {
   position: relative;
-  color: rgba(26, 24, 24, 0.959);
-  border-top: 2px solid rgb(139, 139, 139);
+  color: rgb(71, 68, 80);
+  border-top: 2px solid rgb(71, 68, 80);
   width: 203px;
   left: 20px;
   margin: 0;
   top: 40px;
-  height: 50px;
+  height: 40px;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-  
 }
 .Pagina-2 h1:hover{
   cursor: pointer;
@@ -198,34 +199,36 @@ nav ul li:hover{
 .card-1{
   border-radius: 5px;
   margin: 20px;
-  background-color: rgba(235, 235, 235, 0.603);
+  background-color: rgba(235, 235, 235);
   outline: 2px solid rgba(150, 148, 148, 0.397);
-  box-shadow: 7px 15px 10px #57839A;
+  box-shadow: 7px 7px 20px #000000;
 }
 .card-2{
   border-radius: 5px;
   background-color: black;
   margin: 20px;
-  background-color: rgba(235, 235, 235, 0.603);
+  background-color: rgba(235, 235, 235);
   outline: 2px solid rgba(150, 148, 148, 0.397);
-  box-shadow: 7px 15px 10px #DCB97E;
+  box-shadow: 7px 7px 20px #000000;
 }
 .card-3{
   border-radius: 5px;
   background-color: black;
   margin: 20px;
-  background-color: rgba(235, 235, 235, 0.603);
+  background-color: rgb(235, 235, 235);
   outline: 2px solid rgba(150, 148, 148, 0.397);
-  box-shadow: 7px 15px 10px #425364;
+  box-shadow: 7px 7px 20px #000000;
 }
 .card-4{
   border-radius: 5px;
   background-color: black;
   margin: 20px;
-  background-color: rgba(235, 235, 235, 0.603);
+  background-color: rgba(235, 235, 235);
   outline: 2px solid rgba(150, 148, 148, 0.397);
-  box-shadow: 7px 15px 10px #c7740081;
+  box-shadow: 7px 7px 20px #000000;
 }
+
+
 
 .card-container img:hover{
   cursor: pointer;
