@@ -7,6 +7,8 @@
   <title>Lova</title>
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="Media_query.css">
+  
 </head>
 
 <body>
@@ -43,38 +45,45 @@
 
 
 
-  <!--    pagina 2  -->
-  <div class="Pagina-2">
-    <h1>PRODUTOS</h1>
-    <!--     PRODUTOS CARD     -->
-    <div class="card-container">
-      <div class="card-1">
-        <img src="mockup/bag-1.jpg" alt="">
-        <span class="product-name">Bolsa</span><br>
-        <span class="price">R$200,00</span>
+  <!-- Página 2 - PRODUTOS -->
+<div class="Pagina-2">
+  <h1>PRODUTOS</h1>
+  
+  <!-- Carrinho -->
+  <div class="cart" id="cart">
+      <img onclick="compras()" src="mockup/car_vazio.svg" alt="">
+      <div id="cart-content">
+        
+          <!-- Os itens do carrinho serão inseridos aqui -->
       </div>
-
-      <div class="card-2">
-        <img src="mockup/bag-2.jpg" alt="">
-        <span class="product-name">Bolsa</span><br>
-        <span class="price">R$200,00</span>
-      </div>
-
-      <div class="card-3">
-        <img src="mockup/bag-3.jpg" alt="">
-        <span class="product-name">Bolsa</span><br>
-        <span class="price">R$200,00</span>
-      </div>
-
-      <div class="card-4">
-        <img src="mockup/bag-4.jpg" alt="">
-        <span class="product-name">Bolsa</span><br>
-        <span class="price">R$200,00</span>
-      </div>
-    </div>
   </div>
-  <!--    FIM     --> 
-    <script src="script.js"></script>
+
+  <div class="produtos">
+      <div class="pro">
+          <img src="mockup/bag-1.jpg" alt="">
+          <h3 class="name-product">Maconha 1<br><span class="money">R$ 200,00</span></h3>
+          <button class="btn-cart" onclick="addcart('Nome do produto 1', 200)">Carrinho</button>
+      </div>
+      <div class="pro">
+          <img src="mockup/bag-2.jpg" alt="">
+          <h3 class="name-product">maconha 2<br><span class="money">R$ 150,00</span></h3>
+          <button class="btn-cart" onclick="addcart('Nome do produto 2', 150)">Carrinho</button>
+      </div>
+      <div class="pro">
+          <img src="mockup/bag-3.jpg" alt="">
+          <h3 class="name-product">cocaina 3<br><span class="money">R$ 300,00</span></h3>
+          <button class="btn-cart" onclick="addcart('Nome do produto 3', 300)">Carrinho</button>
+      </div>
+      <div class="pro">
+          <img src="mockup/bag-4.jpg" alt="">
+          <h3 class="name-product">cocaina 4<br><span class="money">R$ 250,00</span></h3>
+          <button class="btn-cart" onclick="addcart('Nome do produto 4', 250)">Carrinho</button>
+      </div>
+  </div>
+</div>
+  <!--    FIM     -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
