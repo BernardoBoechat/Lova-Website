@@ -14,16 +14,6 @@ function moveSlider() {
 
 // Intervalo para mudar a imagem automaticamente (a cada 5 segundos)
 setInterval(moveSlider, 5000);
-//                                  FIMMMMMM SLIDERSS                   //
-
-
-
-
-
-
-
-
-
 
 // Função para adicionar item ao carrinho
 function addToCart(name, price) {
@@ -59,9 +49,13 @@ function viewCart() {
       cartContainer.innerHTML = ''; // Limpar o conteúdo existente
 
       if (cart.length > 0) {
-        cart.forEach((item) => {
+        cart.forEach((item, index) => {
           const itemDiv = document.createElement('div');
-          itemDiv.innerHTML = `<p>${item.name} - R$ ${item.price}</p>`;
+          itemDiv.classList.add('cart-item');
+          itemDiv.innerHTML = `
+            <p>${item.name} - R$ ${item.price}</p>
+            <button onclick="removeFromCart(${index})">Remover</button>
+          `;
           cartContainer.appendChild(itemDiv);
         });
       } else {
@@ -87,19 +81,44 @@ document.getElementById('add-bag-4').addEventListener('click', () => {
   addToCart('Bolsa 4', 250);
 });
 
-
+// MUDANÇA DE ICONE
 document.addEventListener("DOMContentLoaded", function () {
-    const produtos = document.querySelectorAll(".pro");
+  const produtos = document.querySelectorAll(".pro");
 
-    produtos.forEach((produto) => {
-        const icon = produto.querySelector(".bag-icon");
+  produtos.forEach((produto) => {
+    const icon = produto.querySelector(".bag-icon");
 
-        icon.addEventListener("click", function () {
-            if (icon.getAttribute("name") === "bag-handle-outline") {
-                icon.setAttribute("name", "bag-handle");
-            } else {
-                icon.setAttribute("name", "bag-handle-outline");
-            }
-        });
+    icon.addEventListener("click", function () {
+      if (icon.getAttribute("name") === "bag-handle-outline") {
+        icon.setAttribute("name", "bag-handle");
+      } else {
+        icon.setAttribute("name", "bag-handle-outline");
+      }
     });
+  });
 });
+
+// Função para remover item do carrinho
+function removeFromCart(index) {
+  fetch(`/remove-from-cart/${index}`, {
+    method: 'DELETE',
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.message === 'Item removido do carrinho') {
+        alert('Item removido do carrinho!');
+        viewCart(); // Atualiza o carrinho na tela
+      } else {
+        alert('Erro ao remover item do carrinho');
+      }
+    })
+    .catch((err) => {
+      console.error('Erro ao remover item do carrinho:', err);
+    });
+}
+
+// Inicializa o carrinho ao carregar a página
+window.onload = function() {
+  viewCart();
+};
+

@@ -1,62 +1,55 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+
 const app = express();
-const port = 3000;
-
-// Para permitir o envio de JSON no corpo das requisições
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Caminho para o arquivo onde o carrinho será salvo
-const cartFilePath = path.join(__dirname, 'cart.json');
-
-// Função para carregar o carrinho do arquivo JSON
+// Carregar carrinho
 function loadCart() {
-  if (fs.existsSync(cartFilePath)) {
-    const data = fs.readFileSync(cartFilePath, 'utf8');
-    return JSON.parse(data);
+  if (fs.existsSync('cart.json')) {
+    return JSON.parse(fs.readFileSync('cart.json', 'utf-8'));
   }
-  return [];
+  return [];  // Retorna carrinho vazio caso o arquivo não exista
 }
 
-// Função para salvar o carrinho no arquivo JSON
+// Salvar carrinho
 function saveCart(cart) {
-  fs.writeFileSync(cartFilePath, JSON.stringify(cart), 'utf8');
+  fs.writeFileSync('cart.json', JSON.stringify(cart, null, 2));
 }
 
-// Rota para adicionar um item ao carrinho
-app.post('/add-to-cart', (req, res) => {
-  const { name, price } = req.body;
-  
-  // Verificar se os dados estão completos
-  if (!name || !price) {
-    return res.status(400).json({ message: 'Dados inválidos' });
-  }
-
-  // Carregar o carrinho existente
-  let cart = loadCart();
-
-  // Adicionar o item ao carrinho
-  cart.push({ name, price });
-
-  // Salvar o carrinho no arquivo
-  saveCart(cart);
-
-  // Retornar a confirmação de sucesso
-  res.status(200).json({ message: 'Item adicionado ao carrinho', cart });
-});
-
-// Rota para visualizar o carrinho
+// Rota para ver carrinho
 app.get('/view-cart', (req, res) => {
-  // Carregar o carrinho
   const cart = loadCart();
   res.json(cart);
 });
 
-// Servir arquivos estáticos (como CSS, imagens e scripts)
-app.use(express.static('public')); // ou 'assets' dependendo da sua estrutura
+// Rota para adicionar item ao carrinho
+app.post('/add-to-cart', (req, res) => {
+  const { name, price } = req.body;
+  const cart = loadCart();
+  cart.push({ name, price });
+  saveCart(cart);
+  res.status(200).json({ message: 'Item adicionado ao carrinho' });
+});
 
-// Iniciar o servidor
-app.listen(port, () => {
-  console.log(`Servidor rodando na porta ${port}`);
+// Rota para remover item do carrinho
+app.delete('/remove-from-cart/:index', (req, res) => {
+  const index = parseInt(req.params.index);
+  const cart = loadCart();
+
+  if (index >= 0 && index < cart.length) {
+    cart.splice(index, 1);  // Remove o item pelo índice
+    saveCart(cart);
+    res.status(200).json({ message: 'Item removido do carrinho' });
+  } else {
+    res.status(400).json({ message: 'Índice inválido' });
+  }
+});
+
+// Rota para inicializar o servidor
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
