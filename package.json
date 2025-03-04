@@ -1,5 +1,23 @@
 {
+  "name": "lova-website",
+  "version": "1.0.0",
+  "description": "Site em desenvolvimento",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
-    "boxicons": "^2.1.4"
-  }
+    "express": "^4.21.2"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BernardoBoechat/Lova-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/BernardoBoechat/Lova-Website/issues"
+  },
+  "homepage": "https://github.com/BernardoBoechat/Lova-Website#readme"
 }

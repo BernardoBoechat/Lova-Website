@@ -1,0 +1,314 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*     SLIDE      */
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.slider-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.slider-container img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/*    FIM     */
+
+main {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.507);
+}
+
+
+
+
+/*     TITULO    */
+.title {
+  position: absolute;
+  top: 350px;
+  left: 50px;
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.title h1 {
+  font-size: 40px;
+}
+
+.title p {
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+/*     FIM    */
+
+/*                my-header             */
+.my-header .LOVA {
+  position: relative;
+  bottom: 50px;
+  color: rgba(37, 37, 37, 0.829);
+  left: 50px;
+  font-size: 60px;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+  text-shadow: 2px 0px 15px rgba(248, 247, 247, 0.945);
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.my-header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(250, 242, 242, 0.61);
+  z-index: 100;
+  height: 115px;
+}
+
+/*            SEARCH DIV        */
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  ;
+}
+
+
+.search-bar {
+  position: relative;
+  right: 100px;
+  display: flex;
+}
+
+.search-bar input {
+  width: 150px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  padding-left: 40px;
+  outline: none;
+  height: 20px;
+  margin: 0;
+}
+
+.search-bar input::placeholder {
+  width: 100px;
+}
+
+
+/*                HEART ICON        */
+.heart-icon ion-icon {
+  position: relative;
+  top: 8px;
+  left: 100px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+
+
+/*                FIM        */
+
+/*      LUPA           */
+
+.search-icon ion-icon {
+  position: absolute;
+  top: 7px;
+  right: 220px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.185);
+  padding: 5px;
+  border-radius: 50%;
+
+}
+
+/*                    FIM              */
+
+
+/*               BAG-ICON                 */
+
+.bag-icon ion-icon {
+  position: relative;
+  font-size: 26px;
+  top: 8px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.bag-icon a{
+  color: black;
+}
+
+/*                     FIM               */
+
+/*                     NAV                */
+.container-header {
+  justify-items: end;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container-header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.container-header nav ul li {
+  margin-left: 10px;
+}
+
+.container-header nav ul li a {
+  border-right: 1px solid rgb(0, 0, 0);
+  text-decoration: none;
+  color: rgb(8, 4, 4);
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 2px;
+  padding-right: 10px;
+  font-size: 13px;
+}
+
+.container-header nav ul li a:hover {
+  color: rgb(87, 73, 73);
+}
+
+.container-header nav ul li:last-child a {
+  border-right: none;
+}
+
+/*            FIM            */
+
+
+
+/*     PAGINA 2    */
+.Pagina-2 {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(59, 59, 59, 0.356);
+}
+
+/*                FIM            */
+
+
+/*                CARD CONTAINER         */
+.produtos {
+  position: relative;
+  top: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.produtos .pro {
+  margin: 5px;
+  top: 200px;
+  height: 330px;
+  background-color: rgb(240, 232, 232);
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 2px 0px 50px hsla(0, 0%, 0%, 0.432);
+}
+
+.produtos .pro img {
+  position: relative;
+  margin: 20px;
+  margin-left: 25px;
+  border-radius: 8px;
+}
+
+.produtos .pro img:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  transition: 1s;
+}
+
+h3 {
+  position: relative;
+  left: 30px;
+  bottom: 30px;
+}
+
+.valor {
+  color: green;
+}
+
+/*                  FIM          */
+
+.pro ion-icon {
+  position: relative;
+  left: 190px;
+  bottom: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 50%;
+}
+.pro ion-icon:hover {
+  background-color: rgba(0, 0, 0, 0.116);
+}
+/*            FOOTER            */
+
+
+footer {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+footer img {
+  width: 200px;
+  height: 200px;
+}
+
+
+
+/*    Animation   */
+@keyframes important1 {
+  from {
+    box-shadow: 2px 0px 50px hsla(216, 100%, 48%, 0.432);
+    background-color: rgba(0, 241, 52, 0.849);
+  }
+
+  50% {
+    box-shadow: 0px 0px 30px hsl(0, 0%, 100%);
+    background-color: green;
+  }
+
+  65% {
+    box-shadow: 0px 0px 10px hsla(243, 45%, 15%, 0.11);
+    background-color: greenyellow;
+  }
+
+  to {
+    box-shadow: 0px 0px 10px hsla(243, 45%, 15%, 0.11);
+    background-color: gold;
+  }
+}
+
+/*            FIM             */

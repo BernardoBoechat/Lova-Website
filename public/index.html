@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lova</title>
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/Media_query.css">
+</head>
+<body>
+  <header class="my-header">
+    <div class="container-header">
+      <nav>
+        <ul>
+          <li><a href="#home">Acessibilidade</a></li>
+          <li><a href="#produtos">Ajuda</a></li>
+          <li><a href="#produtos">Junte-se a nós</a></li>
+          <li><a href="login.html" target="_blank">Entrar</a></li>
+        </ul>
+    </div>
+    <div class="search-container">
+      <h1 class="LOVA">LOVA</h1>
+      <div class="search-bar">
+        <input type="text" placeholder="Pesquisar">
+        <div class="search-icon">
+          <ion-icon name="search-outline"></ion-icon>
+        </div>
+        <div class="heart-icon">
+          <ion-icon id="heart" onclick="openheart()" name="heart-outline"></ion-icon>
+        </div>
+        <div class="bag-icon">
+          <a href="carrinho.html"><ion-icon name="bag-outline"></ion-icon></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="title">
+      <h1>Estilo e Qualidade: As Melhores Roupas Estão Aqui!</h1>
+      <p>Descubra peças únicas que combinam conforto, elegância e atitude. <br> Vista-se para impressionar!</p>
+    </div>
+
+    <!-- SLIDE -->
+    <div class="slider">
+      <div class="slider-container" id="sliderContainer">
+        <img src="assets/imagens/background1.png" alt="Imagem 1">
+        <img src="assets/imagens/background2.png" alt="Imagem 2">
+        <img src="assets/imagens/background3.jpg" alt="Imagem 3">
+      </div>
+    </div>
+  </main>
+
+  <!-- Página 2 -->
+  <div class="Pagina-2">
+    <!-- PRODUTOS -->
+    <div class="produtos">
+      <div class="pro">
+        <img src="assets/imagens/bag-1.jpg" alt="">
+        <h3 class="name-product">Bolsa<br><span class="valor">R$ 200,00</span></h3>
+        <ion-icon id="add-bag-1" class="bag-icon" name="bag-handle-outline"></ion-icon>
+      </div>
+      <div class="pro">
+        <img src="assets/imagens/bag-2.jpg" alt="">
+        <h3 class="name-product">Bolsa<br><span class="valor">R$ 150,00</span></h3>
+        <ion-icon id="add-bag-2" class="bag-icon" name="bag-handle-outline"></ion-icon>
+      </div>
+      <div class="pro">
+        <img src="assets/imagens/bag-3.jpg" alt="">
+        <h3 class="name-product">Bolsa<br><span class="valor">R$ 300,00</span></h3>
+        <ion-icon id="add-bag-3" class="bag-icon" name="bag-handle-outline"></ion-icon>
+      </div>
+      <div class="pro">
+        <img src="assets/imagens/bag-4.jpg" alt="">
+        <h3 class="name-product">Bolsa<br><span class="valor">R$ 250,00</span></h3>
+        <ion-icon id="add-bag-4" class="bag-icon" name="bag-handle-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; Todos os direitos reservados <br> 2025 SKY CODE</p>
+    <img src="logo/SKY CODE WHITE.png" alt="">
+  </footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

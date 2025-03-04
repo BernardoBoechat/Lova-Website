@@ -1,0 +1,8 @@
+/* Para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    .logo {
+        position: relative;
+        font-size: 40px;
+        left: 45px;
+    }
+}
