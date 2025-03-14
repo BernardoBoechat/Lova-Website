@@ -122,3 +122,13 @@ window.onload = function() {
   viewCart();
 };
 
+
+let menu = document.getElementsByClassName("menu-mobile")[0];
+
+function menubutton(){
+  if(menu.style.display === 'none'){
+    menu.style.display = 'block';
+  }else{
+    menu.style.display = 'none';
+  }
+}

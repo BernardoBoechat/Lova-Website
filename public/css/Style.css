@@ -63,14 +63,14 @@ main {
 .my-header .LOVA {
   position: relative;
   bottom: 50px;
-  color: rgba(37, 37, 37, 0.829);
+  color: rgba(29, 28, 28, 0.733);
   left: 50px;
   font-size: 60px;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: italic;
-  text-shadow: 2px 0px 15px rgba(248, 247, 247, 0.945);
+  text-shadow: 2px 0px 15px rgb(255, 255, 255);
   cursor: pointer;
   letter-spacing: 2px;
 }
@@ -78,17 +78,48 @@ main {
 .my-header {
   position: fixed;
   width: 100%;
-  background-color: rgba(250, 242, 242, 0.61);
+  background-color: rgba(250, 242, 242, 0.788);
   z-index: 100;
   height: 115px;
 }
+/*    MENU MOBILE     */
+.menu-mobile{
+  background-color: rgba(255, 252, 248, 0.774);
+  border-radius: 5px;
+  justify-items: center;
+  position: absolute;
+  padding: 5px;
+  display: none;
+  left: 247px;
+  top: 110px;
+}
+.menu-button{
+  position: absolute;
+  left: 310px;
+  top: 65px;
+  font-size: 35px;
+  display: none;
+}
+.menu-button:hover{
+  background-color: rgba(0, 0, 0, 0.397);
+  border-radius: 50%;
+}
+.menu-mobile p{
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+
+
+/*    FIMMM     */
+
 
 /*            SEARCH DIV        */
 .search-container {
   display: flex;
   justify-content: space-between;
   height: 100px;
-  ;
 }
 
 

@@ -1,8 +1,76 @@
 /* Para telas menores que 768px (tablets e celulares) */
 @media (max-width: 768px) {
-    .logo {
+    .container-header{
+        display: none;
+        background-color: none;
+    }
+    .my-header{
+        background-color: rgba(184, 184, 184, 0.822);
+        height: 110px;
+    }
+    .search-bar input, .search-icon{
+        position: absolute;
+        top: 65px;
+        right: 0px;
+    }
+
+
+    .menu-button{
+        display: block;
+    }
+
+    .my-header .LOVA{
+        bottom: 40px;
+        right: 0px;
+        font-size: 50px;
+    }
+
+    .search-icon{
+        left: 3px;
+    }
+
+    .search-bar input{
+        width: 200px;
+    }
+
+    .pagina-2{
+        height: 100vh;
+    }
+
+    .produtos{
+        display: grid;
+        height: 200px;
+        bottom: 0;
+        margin-top: 0;
         position: relative;
-        font-size: 40px;
-        left: 45px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .produtos .pro, .produtos .pro img{
+        padding: 20px;
+        width: 130px;
+    }
+
+    .produtos .pro{
+        height: 180px;
+    }
+
+    .produtos .pro img{
+        position: relative;
+        width: 130px;
+        margin: 0;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .pro ion-icon{
+        left: 100px;
+        bottom: 100px;
+    }
+
+    .name-product{
+        left: 2px;
+        bottom: 59px;
     }
 }
